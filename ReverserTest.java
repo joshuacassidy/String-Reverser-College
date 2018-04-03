@@ -43,6 +43,30 @@ public class ReverserTest {
     public void reverseTestCase7() throws Exception {
         assertEquals("auhsoj",  reverser.reverse("joshua"));
     }
-    
+
+    @org.junit.Test
+    public void swapTestCase1() throws Exception {
+        assertArrayEquals(new char [] {'a', 'b', 'c'}, reverser.swap(new char[] {'c', 'b', 'a'}, 0));
+    }
+
+    @org.junit.Test
+    public void swapTestCase2() throws Exception {
+        assertArrayEquals(new char [] {'a', 'b', 'c', 'd'}, reverser.swap(new char[] {'d', 'b', 'c', 'a'}, 0));
+    }
+
+    @org.junit.Test
+    public void swapTestCase3() throws Exception {
+        assertArrayEquals(new char [] {'e', 'b', 'c', 'd', 'a'}, reverser.swap(new char[] {'a', 'b', 'c', 'd', 'e'}, 0));
+    }
+
+    @org.junit.Test
+    public void swapTestCase4() throws Exception {
+        assertArrayEquals(new char [] {'a', 'c', 'b', 'd'}, reverser.swap(new char[] {'a', 'b', 'c', 'd'}, 1));
+    }
+
+    @org.junit.Test
+    public void swapTestCase5() throws Exception {
+        assertArrayEquals(new char [] {'a', 'b', 'c', 'd', 'e'}, reverser.swap(new char[] {'a', 'b', 'c', 'd', 'e'}, 2));
+    }
 
 }
