@@ -5,14 +5,14 @@ public class Reverser {
     }
 
     private char[] reverseHelper(char[] str, int index) {
-        if (index > str.length/2) {
+        if (index >= str.length/2) {
             return str;
         } else {
             return reverseHelper(swap(str, index), index+1);
         }
     }
 
-    private char[] swap(char[] arr, int i) {
+    public char[] swap(char[] arr, int i) {
         char temp = arr[i];
         arr[i] = arr[arr.length -1 - i];
         arr[arr.length -1 - i] = temp;
