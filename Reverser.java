@@ -1,12 +1,24 @@
 public class Reverser {
 
     public String reverse(String str) {
-        if (str.length()==0) {
-            return null;
+        return String.valueOf(reverseHelper(str.toCharArray(),0));
+    }
+
+    private char[] reverseHelper(char[] str, int index) {
+        if (index > str.length/2) {
+            return str;
         } else {
-            System.out.print(str.charAt(str.length()-1));
-            return reverse(str.substring(0, str.length()-1));
+            return reverseHelper(swap(str, index), index+1);
         }
     }
+
+    private char[] swap(char[] arr, int i) {
+        char temp = arr[i];
+        arr[i] = arr[arr.length -1 - i];
+        arr[arr.length -1 - i] = temp;
+        return arr;
+    }
+
+
 
 }
